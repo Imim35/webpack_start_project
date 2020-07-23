@@ -105,7 +105,7 @@ module.exports = {
   mode: 'development',
   entry: {
     main: ['@babel/polyfill' ,'./index.js'],
-    analytics: './analytics.ts'
+    // analytics: './analytics.ts'
   },
   output: {
     filename: filename('js'),

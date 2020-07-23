@@ -1,13 +1,11 @@
 //import * as $ from 'jquery' npm i -S jquery -подключение библиотеки
-import Post from "@/Post"; //- демонстрация подключения доп js файлов 
+//import Post from "@/Post"; - демонстрация подключения доп js файлов 
 // import React from "react"; - подключение react
 // import { render } from "react-dom"; - подключение react
 import "@/styles/style.css";
 import "@/styles/scss.scss";
-import "@/babel.js";
+// import "@/babel.js";
 
-const post = new Post("Webpack Post Title");
-console.log("Post:", post.toString());
 
 // const App = () => ( react join
 //   <div className="container">

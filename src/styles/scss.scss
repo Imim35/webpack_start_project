@@ -1,11 +1,14 @@
-$border: 1 px solid #ccc;
-.card {
-  padding: 0px 0px 0px 0px;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
+@import "@/styles/mixin.scss";
+@import "@/styles/nullstyle.scss";
 
-h2 {
-  text-align: center;
-  color: red;
+:root {
+  --main-bg-color: ;
+  --x1: ;
+  --x2: ;
+  --x3: ;
+  --x4: ;
+  --x5: ;
+  --x6: ;
+  --x7: ;
+  --x8: ;
 }

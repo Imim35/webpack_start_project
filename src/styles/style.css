@@ -1,5 +1,5 @@
 @import "~normalize.css";
-@import url(
+/* @import url(
   https://fonts.googleapis.com/css?family=Roboto:100,
   100italic,
   300,
@@ -12,28 +12,4 @@
   700italic,
   900,
   900italic
-);
-body {
-  font-family: "Roboto", sans-serif;
-}
-.container {
-  padding-top: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.code {
-  background-color: #000;
-}
-
-h1 {
-  text-align: center;
-}
-
-.logo {
-  background-image: url("./gg.png");
-  background-size: cover;
-  height: 200px;
-  width: 200px;
-  margin: 0px auto;
-}
+); */
