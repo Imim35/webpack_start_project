@@ -6,7 +6,55 @@ $md1: $mw + 12;
 $md2: 992.98;
 $md3: 767.98;
 $md4: 479.98;
-
+:root {
+  // margin: 0px 54 / $mwc * 100vh 0px 0px;
+  --main-color: #14c0d4;
+  --x1: #f68038;
+  --x2: #999999;
+  --x3: #ffffff;
+  --x4: #333333;
+  --x5: #dedede;
+  --x6: #098494;
+}
+.rub:after {
+  content: "₽";
+}
+.btn {
+  display: inline-flex;
+  padding: 0px 25px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  height: 39px;
+  background-color: var(--x1);
+  color: var(--x3);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 18px;
+  @media (min-width: 992px) {
+    &:hover {
+      background-color: #ee752a;
+    }
+  }
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0px 20px;
+  &._focus {
+  }
+  &._error {
+  }
+}
+textarea.input {
+  resize: none;
+  padding: 0px 0px;
+}
 * {
   padding: 0px;
   margin: 0px;
