@@ -2,8 +2,8 @@
 //import Post from "@/Post"; - демонстрация подключения доп js файлов 
 // import React from "react"; - подключение react
 // import { render } from "react-dom"; - подключение react
-import "@/styles/style.css";
-import "@/styles/scss.scss";
+import "@/assets/styles/style.css";
+import "@/assets/styles/scss.scss";
 // import "@/babel.js";
 
 

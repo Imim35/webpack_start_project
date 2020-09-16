@@ -75,7 +75,8 @@ const jsLoaders = () => {
 const plugins = () => {
   const base = [
     new HtmlWebpackPlagin({
-      template: './index.html',
+      template: './html/index.html',
+      filename: 'index.html',
       minify: {
         collapseWhitespace: isProd
       }
@@ -84,7 +85,7 @@ const plugins = () => {
     new CopyWebpackPlugin({
       patterns: [
           {
-              from: path.resolve(__dirname, 'src/favicon.ico'),
+              from: path.resolve(__dirname, 'src/static/favicon.ico'),
               to: path.resolve(__dirname, 'dist')
           }
       ]
@@ -136,15 +137,37 @@ module.exports = {
       },
       {
         test : /\.(sass|scss)$/,
-        use: cssLoader('sass-loader')
+        use: cssLoader('sass-loader'),
       },
       {
         test: /\.(png|jpg|svg|webp|gif)$/,
-        use: ['file-loader']
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[path][name].[ext]',
+              limit: 8192,
+              esModule: false,
+              outputPath: 'img/',
+            },
+          },
+        ],
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/,
-        use: ['file-loader']
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.html$/,
+        use: 'html-loader',
       },
       {
         test: /\.xml$/,

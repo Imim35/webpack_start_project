@@ -1,0 +1,18 @@
+$fontfamily: "Roboto";
+
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+:root {
+  // margin: 0px 54 / $mwc * 100vh 0px 0px;
+  --main-color: #14c0d4;
+  --x1: #f68038;
+  --x2: #999999;
+  --x3: #ffffff;
+  --x4: #333333;
+  --x5: #dedede;
+  --x6: #098494;
+}
