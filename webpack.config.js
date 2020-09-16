@@ -1,11 +1,11 @@
 const path = require('path');
-const HtmlWebpackPlagin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const HtmlWebpackPlagin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -17,7 +17,7 @@ const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 const optimization = () => {
   const config = {
     splitChunks:{
-      chunks: 'all'
+      chunks: 'all',
     }
   }
   if(isProd){
@@ -34,7 +34,7 @@ const cssLoader = extra=>{
       loader: MiniCssExtractPlugin.loader,
       options: {
         hmr: isDev,
-        reloadAll: true
+        reloadAll: true,
       },
     },
     'css-loader'
@@ -52,12 +52,11 @@ const babelOptions = preset => {
     ],
     plugins: [
       '@babel/plugin-proposal-class-properties'
-    ]
+    ],
   }
   if(preset){
     opts.presets.push(preset)
   }
-
   return opts
 }
 const jsLoaders = () => {
@@ -86,12 +85,16 @@ const plugins = () => {
       patterns: [
           {
               from: path.resolve(__dirname, 'src/static/favicon.ico'),
+              to: path.resolve(__dirname, 'dist/static/')
+          },
+          {
+              from: path.resolve(__dirname, './README.md'),
               to: path.resolve(__dirname, 'dist')
           }
       ]
     }),
     new MiniCssExtractPlugin({
-      filename: filename('css')
+      filename: filename('css'),
     })
   ]
 

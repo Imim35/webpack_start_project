@@ -1,7 +1,7 @@
 {
-  "name": "first_shop",
+  "name": "webpack",
   "version": "1.0.0",
-  "description": "shop on webpack",
+  "description": "webpack",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
