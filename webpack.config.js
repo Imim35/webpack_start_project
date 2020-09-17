@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
-
+const CSSMQPackerPlugin = require ('css-mqpacker-webpack-plugin');  
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -23,6 +23,7 @@ const optimization = () => {
   if(isProd){
     config.minimizer = [
       new OptimizeCssAssetWebpackPlugin(),
+      new CSSMQPackerPlugin(),
       new TerserWebpackPlugin()
     ]
   }
@@ -37,7 +38,16 @@ const cssLoader = extra=>{
         reloadAll: true,
       },
     },
-    'css-loader'
+    { loader: 'css-loader' },
+    { loader: 'postcss-loader',
+      options: {
+        postcssOptions:{
+          plugins: [
+            require('autoprefixer')
+          ]
+        }
+      }
+    },
   ]
   if(extra){
     loader.push(extra)
