@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "resolve-cwd": "^3.0.0"
   }
