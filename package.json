@@ -51,7 +51,7 @@
     "webpack-dev-server": "^3.11.0",
     "xml-loader": "^1.2.1",
     "autoprefixer": "^10.0.0",
-    "postcss": "^8.0.5",
+    "postcss": "^8.2.10",
     "postcss-loader": "^4.0.2",
     "css-mqpacker-webpack-plugin": "^0.3.0"
   },
